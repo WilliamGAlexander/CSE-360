@@ -10,7 +10,7 @@ public class CalculatorTest {
 		c.multiply(2);
 		c.subtract(2);
 		c.divide(2);
-		c.getHistory();
+		System.out.println(c.getTotal());
 		//System.out.println(c.getTotal());
 	}
 
