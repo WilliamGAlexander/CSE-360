@@ -11,15 +11,18 @@ package cse360assign2;
  * and division. There is a method to return the current value and another
  * method that prints the history of previous calculations
  * @author William Alexander
- * @version 2.0
+ * @version 3.0
  */
 
 public class Calculator {
 
 	private int total;
-
+	private String history = " ";
+	
 	public Calculator () {
-		total = 0;  
+		total = 0;
+		//0 is the first term to print
+		history = "0";
 	}
 
 	public int getTotal () {
@@ -28,16 +31,17 @@ public class Calculator {
 
 	public void add (int value) {
 		total = total + value;
+		history = history + " + " + value;
 	}
 
 	public void subtract (int value) {
 		total = total - value;
-
+		history = history + " - " + value;
 	}
 
 	public void multiply (int value) {
 		total = total * value;
-
+		history = history + " * " + value;
 	}
 
 	public void divide (int value) {
@@ -50,12 +54,13 @@ public class Calculator {
 
 			total = total / value;
 		}
-
+		
+		history = history + " / " + value;
 	}
 
 	public String getHistory () {
 
 
-		return "";
+		return history;
 	}
 }
